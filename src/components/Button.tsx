@@ -1,5 +1,11 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 
-export function Button({children }){
-  return <button> {children} </button>
+interface ComponentProps extends ButtonHTMLAttributes<HTMLButtonElement>{
+ label: string
+ 
+}
+export function Button({ label} : ComponentProps){
+  return(
+    <button> {label} </button>
+  )
 }
