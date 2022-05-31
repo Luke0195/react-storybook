@@ -1,7 +1,6 @@
 import { Meta, ArgsTable, Story } from '@storybook/addon-docs';
-import { Button, ComponentProps} from './Button'
+import { Button} from './Button'
 
-let props:ComponentProps = {}
 <Meta title="Components/Button" component={Button}/>
 
 # Button
@@ -9,15 +8,16 @@ let props:ComponentProps = {}
  Componente botão 
 
 <ArgsTable of={Button}/>
+<Button label="Teste botão"/>
 <Canvas>
   <Story
   name="Button Component"
   args={{
-      label: 'Teste botão',
-    ...props,
+      ...Button.defaultProps, 
+      onClick: () =>{},
+      label: 'Label',
+      styleSheet:{}
   }}>
   {(args) => <Button {...args}/>}
   </Story>
  </Canvas>
-
-<Button label="Teste botão"/>

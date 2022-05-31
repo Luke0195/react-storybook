@@ -6,3 +6,11 @@ export function Button({ label}){
     <button> {label} </button>
   )
 }
+
+
+Button.propTypes ={
+  label: PropTypes.string.isRequired,
+}
+Button.defaultProps ={
+  label: 'Texto  Aleatório'
+}
